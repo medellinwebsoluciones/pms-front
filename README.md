@@ -57,3 +57,17 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Code structure
+Code structures is based on
+main folder -- module name
+    features -- each page that shows up (smart components)
+        page-name - page name
+    ui -- contents dummie components (doesn't hae logic or services)
+        component-name - component name
+    data-access -- allow aplication data (services)
+        service-name - service name
+    utils -- contains pipes, etc
+core -- global functions (doesn't have visual elements)
+shared -- all shared elements

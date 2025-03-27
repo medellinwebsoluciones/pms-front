@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="grid">
+        <div class="col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold ">
+                <img alt="Card" class="w-full" src="/imgs/logos/PMS.webp" />
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold ">
+                <p-menu [model]="items">
+                    <ng-template #item let-item>
+                        <ng-container *ngIf="item.route; else elseBlock">
+                            <a [routerLink]="item.route" class="p-menu-item-link">
+                                <span [class]="item.icon"></span>
+                                <span class="ml-2">{{ item.label }}</span>
+                            </a>
+                        </ng-container>
+                        <ng-template #elseBlock>
+                            <a [href]="item.url" class="p-menu-item-link">
+                                <span [class]="item.icon"></span>
+                                <span class="ml-2">{{ item.label }}</span>
+                            </a>
+                        </ng-template>
+                    </ng-template>
+                </p-menu>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold ">4</div>
+        </div>
+        <div class="col-2">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold "><app-social-media/></div>
+        </div>
+    </div>
+</div>
